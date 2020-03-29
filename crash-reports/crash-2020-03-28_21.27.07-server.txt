@@ -1,0 +1,239 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 3/28/20 9:27 PM
+Description: Watching Server
+
+java.lang.Error
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at kt.b(SourceFile:199)
+	at kt.a(SourceFile:173)
+	at xv.a(SourceFile:1029)
+	at xv.a(SourceFile:1012)
+	at xe.h(SourceFile:357)
+	at xd.a(SourceFile:602)
+	at xd$$Lambda$2401/77357296.accept(Unknown Source)
+	at bjw.a(SourceFile:534)
+	at xd.a(SourceFile:398)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:854)
+	at wd.b(SourceFile:347)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:793)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:655)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at kt.b(SourceFile:199)
+	at kt.a(SourceFile:173)
+	at xv.a(SourceFile:1029)
+	at xv.a(SourceFile:1012)
+	at xe.h(SourceFile:357)
+	at xd.a(SourceFile:602)
+	at xd$$Lambda$2401/77357296.accept(Unknown Source)
+	at bjw.a(SourceFile:534)
+	at xd.a(SourceFile:398)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:854)
+	at wd.b(SourceFile:347)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:793)
+
+-- Thread Dump --
+Details:
+	Threads: "Server-Worker-108" Id=175 TIMED_WAITING on java.util.concurrent.ForkJoinPool@1cae0151
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@1cae0151
+	at java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1824)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1693)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+
+"Netty Epoll Server IO #3" Id=37 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #2" Id=29 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #1" Id=28 RUNNABLE
+	at io.netty.channel.epoll.Native.epollWait0(Native Method)
+	at io.netty.channel.epoll.Native.epollWait(Native.java:114)
+	at io.netty.channel.epoll.EpollEventLoop.epollWait(EpollEventLoop.java:239)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:256)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Server Watchdog" Id=26 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:454)
+	at wg.run(SourceFile:45)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"poi IO worker" Id=25 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"chunk IO worker" Id=24 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"poi IO worker" Id=23 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"chunk IO worker" Id=22 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"poi IO worker" Id=21 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"chunk IO worker" Id=20 WAITING on java.lang.String@1269ecb4
+	at sun.misc.Unsafe.park(Native Method)
+	-  waiting on java.lang.String@1269ecb4
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at caz.c(SourceFile:124)
+	at caz.d(SourceFile:134)
+	at caz$$Lambda$2097/1073807252.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"Netty Epoll Server IO #0" Id=19 RUNNABLE
+	at io.netty.channel.unix.FileDescriptor.writeAddress(Native Method)
+	at io.netty.channel.unix.FileDescriptor.writeAddress(FileDescriptor.java:134)
+	at io.netty.channel.epoll.AbstractEpollChannel.doWriteBytes(AbstractEpollChannel.java:361)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel.writeBytes(AbstractEpollStreamChannel.java:274)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel.doWriteSingle(AbstractEpollStreamChannel.java:483)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel.doWrite(AbstractEpollStreamChannel.java:441)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:934)
+	at io.netty.channel.epoll.AbstractEpollChannel$AbstractEpollUnsafe.flush0(AbstractEpollChannel.java:516)
+	...
+
+
+"ObjectCleanerThread" Id=18 TIMED_WAITING on java.lang.ref.ReferenceQueue$Lock@16566a21
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@16566a21
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at io.netty.util.internal.ObjectCleaner$1.run(ObjectCleaner.java:54)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+"DestroyJavaVM" Id=16 RUNNABLE
+
+
+"Server thread" Id=13 RUNNABLE
+	at io.netty.channel.epoll.Native.eventFdWrite(Native Method)
+	at io.netty.channel.epoll.EpollEventLoop.wakeup(EpollEventLoop.java:154)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.execute(SingleThreadEventExecutor.java:774)
+	at kt.b(SourceFile:199)
+	at kt.a(SourceFile:173)
+	at xv.a(SourceFile:1029)
+	at xv.a(SourceFile:1012)
+	at xe.h(SourceFile:357)
+	...
+
+
+"Server Infinisleeper" Id=14 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at wd$1.run(SourceFile:94)
+
+
+"Snooper Timer" Id=12 WAITING on java.util.TaskQueue@5354e68f
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@5354e68f
+	at java.lang.Object.wait(Object.java:502)
+	at java.util.TimerThread.mainLoop(Timer.java:526)
+	at java.util.TimerThread.run(Timer.java:505)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@3f1cc13d
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@3f1cc13d
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@624d9626
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@624d9626
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+
+
+Stacktrace:
+	at wg.run(SourceFile:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Linux (amd64) version 4.4.0-176-generic
+	Java Version: 1.8.0_242, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Private Build
+	Memory: 77408176 bytes (73 MB) / 479723520 bytes (457 MB) up to 479723520 bytes (457 MB)
+	CPUs: 2
+	JVM Flags: 0 total; 
+	Player Count: 9 / 20; [xe['cpilipi'/2387, l='world', x=399.25, y=64.00, z=11.46], xe['Zwigmaster'/2861, l='world', x=250.51, y=63.15, z=-98.91], xe['Lord_Riker'/3210, l='world', x=216.28, y=66.00, z=228.50], xe['fizixboi'/3514, l='world', x=153.56, y=64.00, z=83.52], xe['dragongnostic7'/3691, l='world', x=198.22, y=73.00, z=137.13], xe['Chairman_ChairCo'/4015, l='world', x=597.09, y=63.00, z=130.05], xe['carlieama'/5010, l='world', x=242.74, y=11.00, z=30.00], xe['IAmMohses'/2999, l='world', x=265.70, y=82.00, z=1.51], xe['Kielor85'/3428, l='world', x=242.07, y=11.00, z=40.66]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

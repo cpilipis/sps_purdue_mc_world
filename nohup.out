@@ -1,0 +1,49 @@
+[21:43:39] [main/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21:43:39] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:43:39] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:43:39] [main/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21:43:39] [main/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:43:39] [Server thread/INFO]: Starting minecraft server version 1.15.2
+[21:43:39] [Server thread/INFO]: Loading properties
+[21:43:39] [Server thread/INFO]: Default game type: SURVIVAL
+[21:43:39] [Server thread/INFO]: Generating keypair
+[21:43:39] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_242]
+	at java.io.FileInputStream.read(FileInputStream.java:255) ~[?:1.8.0_242]
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284) ~[?:1.8.0_242]
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) ~[?:1.8.0_242]
+	at java.io.InputStreamReader.read(InputStreamReader.java:184) ~[?:1.8.0_242]
+	at java.io.BufferedReader.fill(BufferedReader.java:161) ~[?:1.8.0_242]
+	at java.io.BufferedReader.readLine(BufferedReader.java:324) ~[?:1.8.0_242]
+	at java.io.BufferedReader.readLine(BufferedReader.java:389) ~[?:1.8.0_242]
+	at wd$2.run(SourceFile:110) [server.jar:?]
+[21:43:40] [Server thread/INFO]: Starting Minecraft server on *:25565
+[21:43:40] [Server thread/INFO]: Using epoll channel type
+[21:43:40] [Server thread/INFO]: Preparing level "world"
+[21:43:40] [Server thread/INFO]: Reloading ResourceManager: Default
+[21:43:50] [Server thread/INFO]: Loaded 6 recipes
+[21:44:22] [Server thread/INFO]: Loaded 825 advancements
+[21:44:59] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:02] [Server thread/INFO]: Preparing spawn area: 0%
+[21:45:03] [Server thread/INFO]: Preparing spawn area: 12%
+[21:45:04] [Server thread/INFO]: Preparing spawn area: 58%
+[21:45:04] [Server thread/INFO]: Preparing spawn area: 58%
+[21:45:05] [Server thread/INFO]: Time elapsed: 5238 ms
+[21:45:05] [Server thread/INFO]: Done (84.552s)! For help, type "help"
+[21:45:09] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2049ms or 40 ticks behind
+[21:48:10] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 5204ms or 104 ticks behind
+[21:48:12] [User Authenticator #1/INFO]: UUID of player cpilipi is c0b6dc48-7707-46c3-beb5-c8ec052234fa
+[21:48:12] [Server thread/INFO]: cpilipi[/172.78.26.62:39034] logged in with entity id 464 at (400.47760418843075, 64.0, 11.402241540745688)
+[21:48:12] [Server thread/INFO]: cpilipi joined the game
+[21:48:47] [Server thread/INFO]: cpilipi lost connection: Disconnected
+[21:48:47] [Server thread/INFO]: cpilipi left the game
+[21:48:50] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 25034ms or 500 ticks behind

@@ -1,0 +1,56 @@
+[22:28:21] [main/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[22:28:22] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22:28:22] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22:28:22] [main/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[22:28:22] [main/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[22:28:22] [Server thread/INFO]: Starting minecraft server version 1.15.2
+[22:28:22] [Server thread/INFO]: Loading properties
+[22:28:22] [Server thread/INFO]: Default game type: SURVIVAL
+[22:28:22] [Server thread/INFO]: Generating keypair
+[22:28:22] [Server thread/INFO]: Starting Minecraft server on *:25565
+[22:28:22] [Server thread/INFO]: Using epoll channel type
+[22:28:22] [Server thread/INFO]: Preparing level "world"
+[22:28:22] [Server thread/INFO]: Reloading ResourceManager: Default
+[22:28:27] [Server thread/INFO]: Loaded 6 recipes
+[22:28:28] [Server thread/INFO]: Loaded 825 advancements
+[22:29:21] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server-Worker-1/INFO]: Preparing spawn area: 0%
+[22:29:24] [Server thread/INFO]: Preparing spawn area: 71%
+[22:29:25] [Server thread/INFO]: Time elapsed: 3665 ms
+[22:29:25] [Server thread/INFO]: Done (62.742s)! For help, type "help"
+[22:29:26] [Server thread/INFO]: Unknown command
+[22:29:26] [Server thread/INFO]: OBOBOBOBOBOBOBOBOBOBOBOBOBOBOAOAOAOAOAOAOAOAOAOAOAOAOAOAOA<--[HERE]
+[22:29:26] [Server thread/INFO]: Unknown command
+[22:29:26] [Server thread/INFO]: <--[HERE]
+[22:29:26] [Server thread/INFO]: Unknown command
+[22:29:26] [Server thread/INFO]: <--[HERE]
+[22:29:26] [Server thread/INFO]: Unknown command
+[22:29:26] [Server thread/INFO]: <--[HERE]
+[22:37:40] [User Authenticator #1/INFO]: UUID of player MonkyButler is 013babc3-bd58-4cca-99de-3e348c7bf95b
+[22:37:40] [Server thread/INFO]: MonkyButler[/71.194.230.17:55419] logged in with entity id 233 at (233.5, 72.0, 89.5)
+[22:37:40] [Server thread/INFO]: MonkyButler joined the game
+[22:42:53] [Server thread/WARN]: Mismatch in destroy block pos: fk{x=0, y=0, z=0} fk{x=232, y=76, z=97}
+[22:43:20] [Server thread/INFO]: MonkyButler lost connection: Disconnected
+[22:43:20] [Server thread/INFO]: MonkyButler left the game
+[22:44:27] [User Authenticator #2/INFO]: UUID of player MonkyButler is 013babc3-bd58-4cca-99de-3e348c7bf95b
+[22:44:27] [Server thread/INFO]: MonkyButler[/71.194.230.17:55525] logged in with entity id 886 at (232.5121660024248, 72.0, 95.39631194538495)
+[22:44:27] [Server thread/INFO]: MonkyButler joined the game
+[22:45:33] [Server console handler/ERROR]: Exception handling console input
+java.io.IOException: Input/output error
+	at java.io.FileInputStream.readBytes(Native Method) ~[?:1.8.0_242]
+	at java.io.FileInputStream.read(FileInputStream.java:255) ~[?:1.8.0_242]
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284) ~[?:1.8.0_242]
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) ~[?:1.8.0_242]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) ~[?:1.8.0_242]
+	at java.io.InputStreamReader.read(InputStreamReader.java:184) ~[?:1.8.0_242]
+	at java.io.BufferedReader.fill(BufferedReader.java:161) ~[?:1.8.0_242]
+	at java.io.BufferedReader.readLine(BufferedReader.java:324) ~[?:1.8.0_242]
+	at java.io.BufferedReader.readLine(BufferedReader.java:389) ~[?:1.8.0_242]
+	at wd$2.run(SourceFile:110) [server.jar:?]
